@@ -1,0 +1,66 @@
+{
+ "model_id": "softmax-classifier",
+ "source_revision": "renn-inverse-fixture-v1",
+ "license": "CC0-1.0",
+ "layers": [
+  {
+   "name": "h1",
+   "weights": [
+    [
+     -1,
+     -0.5
+    ],
+    [
+     -1.5,
+     0.5
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "bias": [
+    1,
+    0.25,
+    0
+   ],
+   "activation": "relu"
+  },
+  {
+   "name": "out",
+   "weights": [
+    [
+     -1.5,
+     -1.5,
+     1.5
+    ],
+    [
+     -1,
+     1,
+     -1
+    ],
+    [
+     2,
+     1.5,
+     -2
+    ]
+   ],
+   "bias": [
+    1,
+    -1,
+    0.5
+   ],
+   "activation": "softmax"
+  }
+ ],
+ "validation_inputs": [
+  [
+   0.5,
+   0.5
+  ],
+  [
+   -1.0,
+   -1.0
+  ]
+ ]
+}

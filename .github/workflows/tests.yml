@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out RENN
+        uses: actions/checkout@v4
+        with:
+          repository: luciangreen/renn
+          path: renn
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install SWI-Prolog
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes swi-prolog-nox
+      - name: Show SWI-Prolog version
+        run: swipl --version
+      - name: Build the fixture models with RENN and run every model's tests
+        env:
+          RENN_DIR: ${{ github.workspace }}/renn
+        run: ./run_tests.sh

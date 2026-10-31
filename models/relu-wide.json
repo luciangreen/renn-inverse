@@ -1,0 +1,73 @@
+{
+ "model_id": "relu-wide",
+ "source_revision": "renn-inverse-fixture-v1",
+ "license": "CC0-1.0",
+ "layers": [
+  {
+   "name": "h1",
+   "weights": [
+    [
+     1,
+     -1,
+     1.5
+    ],
+    [
+     -2,
+     -1.5,
+     -1.5
+    ],
+    [
+     1,
+     -2,
+     -0.5
+    ],
+    [
+     -2,
+     -1.5,
+     1.5
+    ]
+   ],
+   "bias": [
+    0.25,
+    -1,
+    -0.5,
+    -1
+   ],
+   "activation": "relu"
+  },
+  {
+   "name": "out",
+   "weights": [
+    [
+     1.5,
+     -2,
+     -1.5,
+     -0.5
+    ],
+    [
+     -2,
+     1.5,
+     -2,
+     -0.5
+    ]
+   ],
+   "bias": [
+    -1,
+    0.5
+   ],
+   "activation": "linear"
+  }
+ ],
+ "validation_inputs": [
+  [
+   0.5,
+   0.5,
+   0.5
+  ],
+  [
+   -1.0,
+   -1.0,
+   -1.0
+  ]
+ ]
+}

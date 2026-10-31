@@ -1,0 +1,59 @@
+{
+ "model_id": "smooth-mlp",
+ "source_revision": "renn-inverse-fixture-v1",
+ "license": "CC0-1.0",
+ "layers": [
+  {
+   "name": "h1",
+   "weights": [
+    [
+     2,
+     0.5,
+     1.5
+    ],
+    [
+     1,
+     -2,
+     2
+    ],
+    [
+     1,
+     -1,
+     -1.5
+    ]
+   ],
+   "bias": [
+    0.25,
+    -1,
+    -0.5
+   ],
+   "activation": "tanh"
+  },
+  {
+   "name": "out",
+   "weights": [
+    [
+     0.5,
+     -1,
+     -0.5
+    ]
+   ],
+   "bias": [
+    0.25
+   ],
+   "activation": "sigmoid"
+  }
+ ],
+ "validation_inputs": [
+  [
+   0.5,
+   0.5,
+   0.5
+  ],
+  [
+   -1.0,
+   -1.0,
+   -1.0
+  ]
+ ]
+}

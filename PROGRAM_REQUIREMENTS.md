@@ -18,6 +18,7 @@ Given a RENN network (its `architecture.pl` and `weights.pl`) and an observed ou
 | R8 | Exact rules (one per relu pattern) agreeing with RENN | done |
 | R9 | Class rules for softmax classifiers agreeing with RENN's arg max | done |
 | R10 | Superposition report and per-class split predicates | done for first-layer units of relu → softmax networks |
+| R11 | 200 input/output pairs produced by running the code | done (`io_pairs/`) |
 
 ## Non-functional requirements
 

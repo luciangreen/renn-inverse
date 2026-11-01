@@ -46,3 +46,7 @@ Requires SWI-Prolog 9 or later and Python 3 (to build the models with RENN).
 - `exact` enumerates relu patterns, which can number up to 2^(number of relu units). Infeasible patterns are pruned as soon as their constraints conflict, but very wide networks will be slow.
 - `certified` boxes shrink to the `width` option. The guarantee (every solution is inside a kept box) holds at any width, but small widths in many dimensions need many boxes.
 - The box `Lo-Hi` bounds every input. An input outside it is not searched.
+
+## Input/output pairs
+
+[`io_pairs/io_pairs.md`](io_pairs/io_pairs.md) holds 200 input/output pairs for the seven models, each produced by running the code (`io_pairs/generate.pl`, with points from a fixed seed): forward passes, every input that gives an output, outputs no input can give, exact rules and class rules.
